@@ -22,7 +22,7 @@ export default class ApolloProvider<TCache> extends Component<ApolloProviderProp
     operations: PropTypes.object,
   };
 
-  private operations: Map<string, { query: DocumentNode; variables: any }> = new Map();
+  private operations: Map<string, { query: DocumentNode; variables: any }> | null = null;
 
   constructor(props: ApolloProviderProps<TCache>, context: any) {
     super(props, context);

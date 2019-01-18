@@ -19,7 +19,7 @@ export interface IDocumentDefinition {
   variables: ReadonlyArray<VariableDefinitionNode>;
 }
 
-const cache = new Map();
+const cache = new WeakMap();
 
 // the parser is mainly a safety check for the HOC
 export function parser(document: DocumentNode): IDocumentDefinition {
